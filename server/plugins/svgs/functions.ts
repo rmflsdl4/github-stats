@@ -218,7 +218,7 @@ export const generateGithubSVG = async (
 
         return await uploadFileToSupabase({
           file: filePath,
-          bucket: 'public',
+          bucket: 'github-stats',
           destPath: `dooboo-github/${tmpName}`,
         });
       } catch (err: any) {
@@ -253,7 +253,7 @@ export const uploadTrophiesSvg = async (
 
     await uploadFileToSupabase({
       file: filePath,
-      bucket: 'public',
+      bucket: 'github-stats',
       destPath: `dooboo-github/${login}-trophies.svg`,
     });
   } finally {
